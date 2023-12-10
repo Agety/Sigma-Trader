@@ -14,6 +14,7 @@ namespace WebAppMarket.Controllers
         {
             _logger = logger;
             Console.WriteLine("Jerzy dood krol polski");
+            Console.WriteLine("Jerzy dood krol polski");
         }
 
         public IActionResult Index()
