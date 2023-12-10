@@ -13,6 +13,7 @@ namespace WebAppMarket.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
+            Console.WriteLine("Jerzy dood krol polski");
         }
 
         public IActionResult Index()
