@@ -31,6 +31,8 @@ if (!app.Environment.IsDevelopment())
     app.UseHsts();
 }
 
+Console.WriteLine("J.DUDA KROL POLANDI");
+
 app.UseHttpsRedirection();
 app.UseStaticFiles();
 
