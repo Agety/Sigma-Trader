@@ -6,3 +6,36 @@
     <h1 class="display-4">Welcome</h1>
     <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
 </div>
+<div>
+    <script src='https://cdn.plot.ly/plotly-2.27.0.min.js'> </script>
+    <div id='myDiv'><!-- Plotly chart will be drawn inside this DIV --></div>
+</div>
+<script>
+    var gd = document.getElementById('myDiv');
+    var data = [
+        {
+            type: "waterfall",
+            x: [
+                ["2016", "2017", "2017", "2017", "2017", "2018", "2018", "2018", "2018"],
+                ["initial", "q1", "q2", "q3", "total", "q1", "q2", "q3", "total"]
+            ],
+            measure: ["absolute", "relative", "relative", "relative", "total", "relative", "relative", "relative", "total"],
+            y: [10, 20, 30, -10, null, 10, 20, -40, null],
+            base: 300,
+            decreasing: { marker: { color: "#d72516", line: { color: '#d72516', width: 2 } } },
+            increasing: { marker: { color: "#34a853" } }
+        }];
+    var layout = {
+        title: {
+            text: "Profit and loss statement"
+        },
+        waterfallgap: 0.3,
+        xaxis: {
+            title: "",
+            tickfont: { size: 15 },
+            ticks: "outside"
+        }
+    }
+    Plotly.newPlot('myDiv', data, layout);
+</script>
+<div>@ViewData["Message"]</div>
