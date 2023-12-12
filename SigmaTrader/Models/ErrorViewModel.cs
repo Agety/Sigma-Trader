@@ -1,4 +1,4 @@
-namespace WebAppMarket.Models
+namespace SigmaTrader.Models
 {
     public class ErrorViewModel
     {

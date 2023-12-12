@@ -1,11 +1,9 @@
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using SigmaTrader.Models;
 using System.Diagnostics;
-using WebAppMarket.Models;
 
-namespace WebAppMarket.Controllers
+namespace SigmaTrader.Controllers
 {
-    [Authorize]
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
@@ -13,8 +11,6 @@ namespace WebAppMarket.Controllers
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-            Console.WriteLine("test");
-
         }
 
         public IActionResult Index()
@@ -27,7 +23,6 @@ namespace WebAppMarket.Controllers
             return View();
         }
 
-        [AllowAnonymous]
         [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
         public IActionResult Error()
         {
