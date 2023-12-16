@@ -45,26 +45,25 @@ namespace SigmaTrader.Controllers
     {
         private readonly ILogger<HomeController> _logger;
 
-        public HomeController(ILogger<HomeController> logger)
-        {
-            _logger = logger;
-        }
-
-        public IActionResult Index()
-        {
-            /*ViewData["Message"] = TwelveData.Prices.GetPrices();*/
-            return View();
-        }
-
-        public IActionResult Privacy()
+        public ActionResult Index()
         {
             return View();
         }
-
-        [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
-        public IActionResult Error()
+        public ActionResult About()
         {
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+            return View();
+        }
+        public ActionResult Service()
+        {
+            return View();
+        }
+        public ActionResult Team()
+        {
+            return View();
+        }
+        public ActionResult Why()
+        {
+            return View();
         }
     }
 }
