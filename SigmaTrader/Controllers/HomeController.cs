@@ -65,5 +65,10 @@ namespace SigmaTrader.Controllers
         {
             return View();
         }
+
+        public IActionResult Privacy()
+        {
+            return View();
+        }
     }
 }
