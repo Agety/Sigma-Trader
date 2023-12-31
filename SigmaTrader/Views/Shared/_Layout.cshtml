@@ -47,9 +47,9 @@
 <body>
 
 <div>
-
-
-    @RenderBody()
+    <main role="main" class="">
+        @RenderBody()
+    </main>
 
 </div>
 <section class="footer_section">
@@ -60,5 +60,6 @@
         </p>
     </div>
 </section>
+@await RenderSectionAsync("Scripts", required:false)
 </body>
 </html>
