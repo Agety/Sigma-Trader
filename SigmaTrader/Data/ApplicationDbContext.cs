@@ -5,14 +5,13 @@ using SigmaTrader.Areas.Identity.Data;
 
 namespace SigmaTrader.Data
 {
-    public class ApplicationDbContext : IdentityDbContext
+    public class ApplicationDbContext : IdentityDbContext<SigmaTraderUser>
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options)
         {
         }
     }
-
     public class AuthDbContext : IdentityDbContext<SigmaTraderUser>
     {
         public AuthDbContext(DbContextOptions<AuthDbContext> options)

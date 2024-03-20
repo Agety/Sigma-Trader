@@ -27,6 +27,8 @@ namespace SigmaTrader.Data.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(nullable: false),
+                    FirstName = table.Column<string>(maxLength: 256, nullable: false),
+                    LastName = table.Column<string>(maxLength: 256, nullable: false),
                     UserName = table.Column<string>(maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(maxLength: 256, nullable: true),
                     Email = table.Column<string>(maxLength: 256, nullable: true),

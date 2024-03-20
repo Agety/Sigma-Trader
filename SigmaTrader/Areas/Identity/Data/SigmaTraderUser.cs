@@ -11,11 +11,11 @@ namespace SigmaTrader.Areas.Identity.Data
     public class SigmaTraderUser : IdentityUser
     {
         [PersonalData]
-        [Column(TypeName = "navchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string Firstname { get; set; }
 
         [PersonalData]
-        [Column(TypeName = "navchar(100)")]
+        [Column(TypeName = "nvarchar(100)")]
         public string LastName { get; set; }
     }
 }
