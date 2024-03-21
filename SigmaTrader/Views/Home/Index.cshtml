@@ -27,13 +27,14 @@
 
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="navbar-nav  ">
-                        <li class="nav-item">@Html.ActionLink("Market","Privacy","Home",null, new {@class = "nav-link"})</li>
+                        <li class="nav-item">@Html.ActionLink("Market", "Privacy", "Home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Home", "Index", "Home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("About", "About", "Home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Service", "Service", "Home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Why Us", "Why", "Home", null, new { @class = "nav-link" })</li>
                         <li class="nav-item">@Html.ActionLink("Team", "Team", "Home", null, new { @class = "nav-link" })</li>
-                        
+                        <partial name="_LoginPartial"/>
+
                         <form class="form-inline">
                             <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
                                 <i class="fa fa-search" aria-hidden="true"></i>

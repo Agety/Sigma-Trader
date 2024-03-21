@@ -53,7 +53,7 @@ namespace SigmaTrader.Areas.Identity.Pages.Account
 
             [Required]
             [DataType(DataType.Text)]
-            [Display(Name = "Fist Name")]
+            [Display(Name = "Last Name")]
             public string LastName { get; set; }
 
             [Required]
@@ -85,7 +85,12 @@ namespace SigmaTrader.Areas.Identity.Pages.Account
             ExternalLogins = (await _signInManager.GetExternalAuthenticationSchemesAsync()).ToList();
             if (ModelState.IsValid)
             {
+
                 var user = new SigmaTraderUser { UserName = Input.Email, Email = Input.Email };
+
+                user.Firstname = Input.FirstName;
+                user.LastName = Input.LastName;
+
                 var result = await _userManager.CreateAsync(user, Input.Password);
                 if (result.Succeeded)
                 {

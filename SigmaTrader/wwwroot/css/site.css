@@ -21,25 +21,25 @@ body {
   margin-bottom: 60px;
 }
 
-.login-logout-card .cardheader{
-    padding: 0px 0px 12px 0px;
+.login-logout-card .card-header{
+    padding: 0px 0px 12px 0px !important;
 }
 
-.login-logout-card .nav-tabs {
-    width: 50%;
+.login-logout-card ul.nav-tabs {
+    margin: 0px 0px -12px 0px !important;
 }
 
-.login-logout-card .nav-item {
-    font-size: 1rem;
-    color: #495057;
-    text-align: center;
-    padding: 1rem;
+.login-logout-card li.nav-item {
+    width: 50% !important;
 }
 
 .login-logout-card a.nav-link {
-    padding: 0px 0px 12px 0px;
+    font-size: 1rem !important;
+    color: #495057 !important;
+    text-align: center !important;
+    padding: 1rem !important;
 }
 
 .login-logout-card .card-body {
-    padding: 10px 20px;
+    padding: 10px 20px !important;
 }
